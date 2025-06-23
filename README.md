@@ -113,8 +113,8 @@ But you can also command through short phrases that suggest any of the above com
 
 # Authors
 - [Kennymar Oliveira](https://github.com/KennymarOliveira)
-- [Thiago Lopes](https://github.com/thiagoclopes)
 - [Virna Aguiar](https://github.com/virnaaguiaar)
+- [Thiago Lopes](https://github.com/thiagoclopes)
 
 Supervisor: [Helton Maia](https://heltonmaia.github.io/heltonmaia/) 
 
