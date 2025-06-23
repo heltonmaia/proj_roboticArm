@@ -8,6 +8,7 @@ This project encompasses computer vision, machine learning, 3D printing, and Ard
 ### **Requirements**
   - Windows 10 or 11
   - Webcam or a smartphone
+  - An Arduino board
   - Arduino IDE
 
 ### **Downloading the Robotic Arm Control program**
