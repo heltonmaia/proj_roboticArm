@@ -6,6 +6,7 @@ This project encompasses computer vision, machine learning, 3D printing, and Ard
 
 # How to use
 ### **Requirements**
+  - Windows 10 or 11
   - Webcam or a smartphone
   - Arduino IDE
 
