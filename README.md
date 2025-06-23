@@ -1,6 +1,6 @@
 # Hybrid Control for Robotic Arms: Combining Gesture Recognition and Voice Commands
 
-This project encompasses computer vision, machine learning, 3D printing, and Arduino integration, with the primary goal of enabling robotic arms to replicate the movements of a human arm. The project consists of a PyQt6 application where the user can choose to control the robotic arm either through gestures or voice commands. If the user prefers gesture control, the application will use the OpenCV computer vision library to capture real-time images using a webcam or smartphone, and relevant information from the user's hand will then be detected by one of our neural networks trained based on the YOLOv8 architecture. However, if the user prefers voice command control, the application will use the Librosa library for recording and processing, and then our custom audio classification neural network will be used to recognize the command. Regardless of the control method, the movement of the robotic arm, which was 3D-printed, is executed by the Arduino according to serial port commands sent by a Python script using the Pyserial module.
+This project encompasses computer vision, machine learning, 3D printing, and Arduino integration, with the primary goal of enabling robotic arms to replicate the movements of a human arm. The project consists of a PyQt6 application where the user can choose to control the robotic arm either through manual gestures, automatic gestures or voice commands. If the user prefers gesture controls, the application will use the OpenCV computer vision library to capture real-time images using a webcam or smartphone, and relevant information from the user's hand will then be detected by one of our neural networks trained based on the YOLOv11 architecture. However, if the user prefers voice command control, the application will use Google's Gemini 2.0 Flash model, the speech_recognition library and the pyaudio library to record and process the user's voice commands. Regardless of the control method, the movement of the robotic arm, which was 3D-printed, is executed by the Arduino according to serial port commands sent by the program.
 
 [Project video](https://github.com/heltonmaia/ECT-proj-roboticArm/assets/4681481/2796c126-4182-4c66-be8b-e16110343908)
 
@@ -11,8 +11,7 @@ This project encompasses computer vision, machine learning, 3D printing, and Ard
 
 ### **Downloading the Robotic Arm Control program**
 
-Downloading the Robotic Arm Control program
-
+Access <a href="https://github.com/heltonmaia/proj_roboticArm/releases/" target="_blank">our releases</a> and download the latest one available.
 
 ### **Accessing the camera and the microphone**
 If you don't have a webcam, you can use the Droidcam app on a smartphone to use the phone's camera as a webcam
@@ -48,7 +47,35 @@ Select the right serial port within the IDE, compile and send the code to the bo
 
 ### **Using the App**
 
-Using the App
+#### **Choosing a control method**
+<h5 align="center"><b>1 - Select "Setup"</b></h5>
+<p align="center"><img src="https://github.com/heltonmaia/proj_roboticArm/blob/main/images/app/setup_selection.png" style="width: 600px; height: 420px;"></p>
+
+<h5 align="center"><b>2 - Select, for example, "Automatic gestures"</b></h5>
+<p align="center"><img src="https://github.com/heltonmaia/proj_roboticArm/blob/main/images/app/automatic_gestures_selection_0.png" style="width: 600px; height: 420px;"></p>
+<p align="center"><img src="https://github.com/heltonmaia/proj_roboticArm/blob/main/images/app/automatic_gestures_selection_1.png" style="width: 600px; height: 420px;"></p>
+
+<h5 align="center"><b>3 - Select "Save"</b></h5>
+<p align="center"><img src="https://github.com/heltonmaia/proj_roboticArm/blob/main/images/app/automatic_gestures_selection_2.png" style="width: 600px; height: 420px;"></p>
+
+Note that the Voice control method uses Google's Gemini 2.0 Flash model, and it needs an API key, which you can get <a href="https://aistudio.google.com/app/apikey" target="_blank">here</a>. You will need to login with your google account in order to get the API key.
+
+Now just copy and paste the API key to it's place within the Setup window:
+<p align="center"><img src="https://github.com/heltonmaia/proj_roboticArm/blob/main/images/app/api_key.png" style="width: 600px; height: 420px;"></p>
+
+#### **Selecting the right COM port**
+Check the COM port that your Arduino board is using inside the IDE and put the same value in "COM Port". The default value is 3.
+<p align="center"><img src="https://github.com/heltonmaia/proj_roboticArm/blob/main/images/app/com_port_selection.png" style="width: 600px; height: 420px;"></p>
+
+#### **Selecting the right capture device**
+The default capture device index is 0, if it does not work, try 1, 2, etc.
+<p align="center"><img src="https://github.com/heltonmaia/proj_roboticArm/blob/main/images/app/capture_device_selection.png" style="width: 600px; height: 420px;"></p>
+
+**Don't forget to save before closing the Setup window**
+
+#### **Running the app**
+Now with the app configured, just select "Start":
+<p align="center"><img src="https://github.com/heltonmaia/proj_roboticArm/blob/main/images/app/start_selection.png" style="width: 600px; height: 420px;"></p>
 
 # Examples
 
