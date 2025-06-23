@@ -6,48 +6,30 @@ This project encompasses computer vision, machine learning, 3D printing, and Ard
 
 # How to use
 ### **Requirements**
-  - Python 3.10 ([Install Guide](https://www.python.org/downloads/release/python-3100/))
-  - Visual Studio Code ([Setup Guide](https://code.visualstudio.com/docs/setup/setup-overview)) or any IDE of your choice
-  - A Python virtual environment ([How to do it on VS Code](https://code.visualstudio.com/docs/python/environments))
-  - Arduino IDE ([Install Guide](https://www.arduino.cc/en/software))
   - Webcam or a smartphone
-    
-### **Configuring the project**
-Download the "Hybrid-Robotic-Arm-Control.zip" file and extract it to a folder with the same name. This will be the main project directory.
+  - Arduino IDE
 
-Open the folder in your preferred IDE.
+### **Downloading the Robotic Arm Control program**
 
-The weight files for both neural networks to function should be in the "src/misc/" directory inside the main folder.
+Downloading the Robotic Arm Control program
 
-There will be a "readme.txt" file with download links.
 
-If you have already created a virtual environment, activate it.
+### **Accessing the camera and the microphone**
+If you don't have a webcam, you can use the Droidcam app on a smartphone to use the phone's camera as a webcam
 
-### **Installing Necessary Modules**
+  - Install the Droidcam app (Android or IOS): <a href="https://www.dev47apps.com" target="_blank">Download Page</a>
+  - Install the Droidcam client on Windows: <a href="https://www.dev47apps.com/droidcam/windows/" target="_blank">Download Page</a>
+  - Then follow the instructions to connect: <a href="https://www.dev47apps.com/droidcam/connect/" target="_blank">Connection Guide</a>
 
-After creating the virtual environment, it's time to install all the necessary modules.
 
-Download the "requirements.txt" file available in this repository. Open the terminal in the IDE and type this command, replacing it with the correct directory of the file:
+### **Installing and configuring the Arduino IDE**
+Follow <a href="https://docs.arduino.cc/software/ide-v2/tutorials/getting-started/ide-v2-downloading-and-installing/" target="_blank">this guide</a> to install the Arduino IDE.
 
-```python
-pip install -r C:\Path\To\The\File\requirements.txt
-```
-
-### **Accessing the Camera and Microphone**
-
-If you don't have dedicated a camera or microphone, you can use the Droidcam mobile app to use your smartphone as both devices.
-  - Install the Droidcam app (Android or IOS): [Download Page](https://www.dev47apps.com)
-  - Install the Droidcam client on Windows: [Download Page](https://www.dev47apps.com/droidcam/windows/)
-  - Then follow the instructions to connect: [Connection Guide](https://www.dev47apps.com/droidcam/connect/)
-
-Configuring the Arduino IDE
-
-Once you installed the Arduino IDE, you can download the zip file of the VarSpeedServo library available [here](https://github.com/netlabtoolkit/VarSpeedServo) and install it by following [this guide](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries).
-
+Once you installed the Arduino IDE, you can download the zip file of the VarSpeedServo library available <a href="https://github.com/netlabtoolkit/VarSpeedServo" target="_blank">here</a> and install it by following <a href="https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries" target="_blank">this guide</a>.
 Now use the file "serial-port-command-receiver.cpp" in the Arduino IDE.
 
 ### **Assembling the circuit**
-The following circuit was simulated using the [Wokwi](https://wokwi.com/projects/new/arduino-uno) online platform, and considering that the four servomotors are already fitted to the robotic arm, the circuit of this image bellow must be physically assembled.
+The following circuit was simulated using the <a href="https://wokwi.com/" target="_blank">Wokwi</a> online platform, and considering that the four servomotors are already fitted to the robotic arm, the circuit in this image bellow must be physically assembled.
 
 <p align="center"><img src="https://github.com/heltonmaia/ECT-proj-roboticArm/blob/main/images/wokwi.PNG?raw=true" style="width: 600px; height: 420px;"></p>
 
@@ -66,21 +48,13 @@ Select the right serial port within the IDE, compile and send the code to the bo
 
 ### **Using the App**
 
-Run the "roboticarm_qt.py" file. If you encounter any errors related to DLLs, copy the "libomp140.x86_64.dll" file available [here](https://github.com/heltonmaia/ECT-proj-roboticArm/tree/main/fixes) to your system's "C:\Windows\System32\" folder.
-
-After running the application, go to the Setup screen and enter the serial port corresponding to your Arduino.
-
-Choose the capture device (usually 0 or 1, but it may differ if you have multiple cameras and microphones connected to your computer).
-
-Select the desired control method, and now everything is ready.
-
-Start the robotic arm control through the main menu.
+Using the App
 
 # Examples
 
-### **Gestures**
+### **Manual Gestures**
 
-The following images are examples that show what approximate positions the hand must be in for detections to be made correctly.
+The following images are examples that show what approximate positions the hand must be in for detections to be made correctly with this method.
 
 <h3 align="center"><b>Open hand</b></h3>
 <p align="center"><img src="https://github.com/heltonmaia/ECT-proj-roboticArm/blob/main/images/open%20hand.png?raw=true" style="width: 600px; height: 420px;"></p>
@@ -88,13 +62,27 @@ The following images are examples that show what approximate positions the hand 
 <h3 align="center"><b>Closed hand</b></h3>
 <p align="center"><img src="https://github.com/heltonmaia/ECT-proj-roboticArm/blob/main/images/closed%20hand.png?raw=true" style="width: 600px; height: 420px;"></p>
 
+### **Automatic Gestures**
+
+The following images are examples that show what approximate positions the hand must be in for detections to be made correctly with this method.
+
+<h3 align="center"><b>"Start" command</b></h3>
+
+<h3 align="center"><b>"Search" command</b></h3>
+
+<h3 align="center"><b>"Grab" command </b></h3>
+
+<h3 align="center"><b>"Stop" command</b></h3>
+
 ### **Voice commands**
 
-These are the voice commands that our audio classification neural network currently identifies.
+The following voice commands are used for an ideal detection. 
 
 ```
-up, down, left, right, open, close
+Right, Left, Up, Down, Open or Close
 ```
+
+But you can also command through short phrases that suggest any of the above commands, such as "go right", "go up" or "open gripper". As long as the sentence does not take more than 2 seconds to be spoken, it should work correctly.
 
 # Authors
 - [Kennymar Oliveira](https://github.com/KennymarOliveira)
