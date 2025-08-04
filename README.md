@@ -62,7 +62,7 @@ Select the right serial port within the IDE, compile and send the code to the bo
 
 Note that the Voice control method uses Google's Gemini 2.0 Flash model, and it needs an API key, which you can get <a href="https://aistudio.google.com/app/apikey" target="_blank">here</a>. You will need to login with your google account in order to get the API key.
 
-Now just copy and paste the API key to it's place within the Setup window:
+Now just copy and paste the API key to its place in the configuration window:
 <p align="center"><img src="https://github.com/heltonmaia/proj_roboticArm/blob/main/images/app/api_key.png" style="width: 600px; height: 420px;"></p>
 
 #### **Selecting the right COM port**
