@@ -96,12 +96,16 @@ The following images are examples that show what approximate positions the hand 
 The following images are examples that show what approximate positions the hand must be in for detections to be made correctly with this method.
 
 <h3 align="center"><b>"Start" command</b></h3>
+<p align="center"><img src="https://github.com/heltonmaia/ECT-proj-roboticArm/blob/main/images/start%20example.png?raw=true" style="width: 600px; height: 420px;"></p>
 
 <h3 align="center"><b>"Search" command</b></h3>
+<p align="center"><img src="https://github.com/heltonmaia/ECT-proj-roboticArm/blob/main/images/search%20example.png?raw=true" style="width: 600px; height: 420px;"></p>
 
 <h3 align="center"><b>"Grab" command </b></h3>
+<p align="center"><img src="https://github.com/heltonmaia/ECT-proj-roboticArm/blob/main/images/grab%20example.png?raw=true" style="width: 600px; height: 420px;"></p>
 
 <h3 align="center"><b>"Stop" command</b></h3>
+<p align="center"><img src="https://github.com/heltonmaia/ECT-proj-roboticArm/blob/main/images/stop%20example.png?raw=true" style="width: 600px; height: 420px;"></p>
 
 ### **Voice commands**
 
